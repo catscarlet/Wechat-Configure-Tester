@@ -1,12 +1,17 @@
 # Wechat Configure Tester
 
 ## Introduction
+这是一个微信配置检测工具。在有 appID 和 appsecret 的条件下，可以：
 
-这是一个微信配置检测工具，能够在有 **appID** 和 **appsecret** 的条件下，获取 **access_token** 、**用户列表**、**指定用户详细信息**、**模板列表**，并 **发送模板消息**。
+- 获取 access_token 、
+- 获取 用户列表、
+- 获取 指定用户详细信息、
+- 获取 模板列表，
+- 并可 发送模板消息。
 
-可用于检测部分微信配置是否正确。
+可用于检测部分微信配置是否正确，并测试模板消息发送。
 
-**在Linux命令行下运行完美，需要php环境支持。**
+在Linux命令行下运行完美，需要php环境支持。
 
 ## The reason why I make it.
 （急着用，请跳过本段）
@@ -23,7 +28,7 @@
 - 是 appID、appsecret填错了？
 - 是 模板ID 写错了？
 
-- 要 电话实施支持 吗？
+- 要 电话支持 吗？
 - 要 使用QQ远程 吗？
 - 要 去现场支持 吗？
 - 要 装个Teamviewer 吗？
@@ -116,8 +121,6 @@ Array
 需要手动修改文件中的 $tplId，修改成 3-getTplList.php 获取到的 template_id。
 
 需要手动修改文件中的 $data ，**需要根据模板格式手工调节，请注意**。
-
-## 截图
 
 ## TODO
 
