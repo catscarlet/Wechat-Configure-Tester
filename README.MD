@@ -95,33 +95,33 @@ Array
 #### 1-getUserList.php
 获取用户列表。
 
-需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
+- 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
 
 小技巧：有时候用户设备上用户数量太大，而每个微信账号在不同的微信服务号中也不同，会找不到自己的 openid，这时可以先取消自己的微信号订阅，运行一次1-getUserList.php，再关注，再运行一次1-getUserList.php，就可以找到两次的差异，这个差异就是自己的微信openid了。
 
 #### 2-getUserInfo.php
 获取用户信息
 
-需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
-需要手动修改文件中的 $openid，修改成 1-getUserList.php 获取到的 openid。
+- 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
+- 需要手动修改文件中的 $openid，修改成 1-getUserList.php 获取到的 openid。
 
 只是为了确认找到的是自己的微信号而用。
 
 #### 3-getTplList.php
 获取模板列表
 
-需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
+- 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
 
 可以获得此微信服务号的所有模板信息。
 
 #### 4-sendTplMsg.php
 发送模板消息
 
-需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
-需要手动修改文件中的 $openid，修改成 1-getUserList.php 获取到的 openid。
-需要手动修改文件中的 $tplId，修改成 3-getTplList.php 获取到的 template_id。
+- 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
+- 需要手动修改文件中的 $openid，修改成 1-getUserList.php 获取到的 openid。
+- 需要手动修改文件中的 $tplId，修改成 3-getTplList.php 获取到的 template_id。
 
-需要手动修改文件中的 $data ，**需要根据模板格式手工调节，请注意**。
+- 需要手动修改文件中的 $data ，**需要根据模板格式手工调节，请注意**。
 
 ## TODO
 
