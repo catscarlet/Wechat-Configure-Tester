@@ -1,6 +1,7 @@
 # Wechat Configure Tester
 
 ## Introduction
+
 这是一个微信配置检测工具。在有 appID 和 appsecret 的条件下，可以：
 
 - 获取 access_token
@@ -14,6 +15,7 @@
 在Linux命令行下运行完美，需要php环境支持。
 
 ## The reason why I make it.
+
 （急着用，请跳过本段）
 
 把能配置微信公众平台的产品卖出去了，却发现服务不能正常工作，比如发不出去模板消息。
@@ -27,7 +29,6 @@
 - 是 网络 有问题？
 - 是 appID、appsecret 填错了？
 - 是 模板ID 写错了？
-
 
 - 要 电话支持 吗？
 - 要 使用QQ远程 吗？
@@ -48,6 +49,7 @@
 `php 4-sendTplMsg.php`
 
 结果示例：
+
 ```
 go post data: {
     "touser":"ofpXxwCr37CVYnKCbd1Evk_0xzec",
@@ -86,6 +88,7 @@ Array
 **Result** 即为微信服务器返回的结果，可根据此结果判断是否有错误，比如 access_token 过期、模板ID错误等。
 
 #### 0-getToken.php
+
 获取 access_token。
 
 需要手动修改文件中的 $appid 和 $appsecret。请求成功后会获得 access_token。
@@ -93,6 +96,7 @@ Array
 （注：此操作会更新access_token，如用户设备仍在运行，可能会互相影响，请注意）
 
 #### 1-getUserList.php
+
 获取用户列表。
 
 - 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
@@ -100,6 +104,7 @@ Array
 小技巧：有时候用户设备上用户数量太大，而每个微信账号在不同的微信服务号中也不同，会找不到自己的 openid，这时可以先取消自己的微信号订阅，运行一次1-getUserList.php，再关注，再运行一次1-getUserList.php，就可以找到两次的差异，这个差异就是自己的微信openid了。
 
 #### 2-getUserInfo.php
+
 获取用户信息
 
 - 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
@@ -108,6 +113,7 @@ Array
 只是为了确认找到的是自己的微信号而用。
 
 #### 3-getTplList.php
+
 获取模板列表
 
 - 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
@@ -115,6 +121,7 @@ Array
 可以获得此微信服务号的所有模板信息。
 
 #### 4-sendTplMsg.php
+
 发送模板消息
 
 - 需要手动修改文件中的 $access_token，修改成 0-getToken.php 获取到的 access_token。
